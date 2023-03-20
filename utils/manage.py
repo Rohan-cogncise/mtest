@@ -2,7 +2,7 @@ from django.contrib.auth.base_user import BaseUserManager
 from django.utils import timezone
 
 
-class UserManager(BaseUserManager):
+class CustomUserManager(BaseUserManager):
 
     def _create_user(self, email, password, is_staff, is_superuser, **extra_fields):
         now = timezone.now()
